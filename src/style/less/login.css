@@ -1,0 +1,147 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.modal .modal-header {
+  text-align: center;
+}
+.modal .modal-footer {
+  text-align: center;
+}
+.modal .modal-footer #model_btn {
+  width: 45%;
+  background: #FE4070;
+  height: 45px;
+}
+.head .row .logo {
+  background: url(../../img/logo_new_v1.jpg) no-repeat center center;
+  height: 100px;
+}
+.head .row .logo a {
+  display: inline-block;
+  height: 100px;
+  width: 100%;
+  text-indent: -9999px;
+}
+.head .row .header {
+  float: left;
+  height: 100px;
+  position: relative;
+  background: #fff;
+}
+.head .row .header .header_left {
+  position: absolute;
+  top: 29px;
+  background: url(../../img/header_corn_new_v2.png) no-repeat top left;
+  height: 31px;
+}
+.head .row .header .header_left a {
+  display: inline-block;
+  height: 31px;
+  width: 100%;
+  text-indent: -9999px;
+}
+.head .row .header .header_center {
+  position: absolute;
+  top: 29px;
+  left: 150px;
+  background: url(../../img/gild.png) no-repeat top left;
+  height: 31px;
+}
+.head .row .header .header_center a {
+  display: inline-block;
+  height: 31px;
+  width: 100%;
+  text-indent: -9999px;
+}
+.head .row .header .header_right {
+  position: absolute;
+  top: 29px;
+  left: 370px;
+  background: url(../../img/header_corn_new_v2.png) no-repeat 6px -64px;
+  height: 31px;
+}
+.head .row .header .header_right a {
+  display: inline-block;
+  height: 31px;
+  width: 100%;
+  text-indent: -9999px;
+}
+.form .row {
+  background: url(../../img/signPic.jpg) no-repeat left bottom;
+  height: 480px;
+}
+.form .row .pic {
+  height: 480px;
+}
+.form .row .pic a {
+  display: inline-block;
+  height: 480px;
+  width: 100%;
+  text-indent: -9999px;
+}
+.form .row .form_login {
+  height: 480px;
+  background: #fff;
+}
+.form .row .form_login .form-group {
+  padding: 20px;
+  border: 1px solid #f2f2f2;
+}
+.form .row .form_login .form-group li {
+  height: 55px;
+  width: 100%;
+  list-style: none;
+  margin-top: 10px;
+}
+.form .row .form_login .form-group li input {
+  height: 36px;
+  width: 100%;
+}
+.form .row .form_login .form-group li input[id=message] {
+  width: 45%;
+}
+.form .row .form_login .form-group li input[id=mess_btn] {
+  width: 45%;
+  float: right;
+  background-color: #f2f2f2;
+  color: #666;
+  outline: none;
+  border: none;
+}
+.form .row .form_login .form-group li input[class=btn_login] {
+  color: #fff;
+  background-color: #F8296D;
+  outline: none;
+  border: none;
+}
+.form .row .form_login .form-group li ::-webkit-input-placeholder {
+  color: #666;
+  padding-left: 5px;
+}
+.form .row .form_login .form-group li span {
+  font-size: 8px;
+  text-align: left;
+  padding-left: 5px;
+  color: #aaa;
+}
+.form .row .form_login .form-group li .hot {
+  font-size: 36px;
+  color: #e31256;
+}
+.form .row .form_login .form-group li .link {
+  float: right;
+  line-height: 55px;
+}
+.form .row .form_login .form-group li .link a {
+  color: #ed145b;
+}
+.form .row .form_login .form-group li a {
+  color: #ed145b;
+  font-size: 12px;
+}
+.form .row .form_login .form-group li a:last-child {
+  float: right;
+}

@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+
+// 侧边固定栏样式
+#fix{
+    height:100%;
+    width:40px;
+    position: fixed;
+    right:0;
+    top:0;
+    background:#444851;
+    z-index: 1000;
+    
+    ul{
+        list-style: none;
+        li{
+            font-size:20px;
+            
+            width:100%;
+            text-align: center;
+           
+            :hover{
+                background-color: #ED145B;
+            }
+           
+            a{
+                color:#ccc;
+                display: inline-block;
+                text-decoration: none;
+                width:100%;
+                padding-top:10px;
+                padding-bottom:10px;
+                :hover{
+                    color:#eee;
+                }
+            }
+        }
+        li:first-child{
+            margin-top:80px;
+        }
+        li:nth-child(2){
+            p{
+                font-size:14px;
+            }
+            #number{
+                
+                background:#ED145B;
+                width:50%;
+                border-radius: 50%;
+                margin-left:22%;
+            }
+           
+        }
+        li:nth-child(6){
+            margin-top:50px;
+        }
+    }
+}
+
+
+
+// 头部导航样式
+.navbar{
+    height:30px;
+    padding: 0px;
+    min-height: 0px;
+    .navbar-nav{
+        li{
+            height:30px;
+            padding:5px 15px;
+            a{
+                padding: 0;
+                
+               :hover{
+                   color:#ED145B;
+                }
+            }
+        }
+        .dropdown{
+            .dropdown-menu{
+                min-width: 120px;
+            }
+        }
+}
+}
+
+
+// 头部搜索
+.header{
+    height:100px;
+    margin-top:0;
+    .row{
+        height:100%;
+        padding: 0;
+        margin:0;
+        
+       
+        .logo_index{
+            padding: 0;
+            height:100px;
+            background:url(../../img/logo_new_v1.jpg) no-repeat center center;
+        }
+        .input-group{
+           margin-top:30px;
+           input{
+               height:40px;
+               border-radius: 0;
+               border:2px solid #ED145B;
+               outline: none;
+           }
+           button{
+            height:40px;
+            background:#ED145B;
+            color:#fff;
+            border-radius: 0;
+            width:100px;
+            outline: none;
+            margin-left:-2px;
+           }
+        }
+
+        .btn-group{
+            margin-top:30px;
+           
+            
+            .btn{
+                border-radius:2px;
+                height:40px;
+                font-size:12px;
+                a{
+                    text-decoration: none;
+                    color:#777;
+                }
+            
+                span{
+                    color:#ED145B;
+                    font-size:14px;
+                    margin-left:5px;
+                    margin-right:5px;
+                }
+
+            }
+            .dropdown-menu{
+                height:50px;
+                width:300px;
+               
+
+            }
+            
+
+        }
+    }
+    
+}
+
+
+
+#content{
+    width:100%;
+    img{
+        width:100%;
+    }
+}

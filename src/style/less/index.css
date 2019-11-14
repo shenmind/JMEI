@@ -1,0 +1,130 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#fix {
+  height: 100%;
+  width: 40px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #444851;
+  z-index: 1000;
+}
+#fix ul {
+  list-style: none;
+}
+#fix ul li {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+#fix ul li :hover {
+  background-color: #ED145B;
+}
+#fix ul li a {
+  color: #ccc;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#fix ul li a :hover {
+  color: #eee;
+}
+#fix ul li:first-child {
+  margin-top: 80px;
+}
+#fix ul li:nth-child(2) p {
+  font-size: 14px;
+}
+#fix ul li:nth-child(2) #number {
+  background: #ED145B;
+  width: 50%;
+  border-radius: 50%;
+  margin-left: 22%;
+}
+#fix ul li:nth-child(6) {
+  margin-top: 50px;
+}
+.navbar {
+  height: 30px;
+  padding: 0px;
+  min-height: 0px;
+}
+.navbar .navbar-nav li {
+  height: 30px;
+  padding: 5px 15px;
+}
+.navbar .navbar-nav li a {
+  padding: 0;
+}
+.navbar .navbar-nav li a :hover {
+  color: #ED145B;
+}
+.navbar .navbar-nav .dropdown .dropdown-menu {
+  min-width: 120px;
+}
+.header {
+  height: 100px;
+  margin-top: 0;
+}
+.header .row {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.header .row .logo_index {
+  padding: 0;
+  height: 100px;
+  background: url(../../img/logo_new_v1.jpg) no-repeat center center;
+}
+.header .row .input-group {
+  margin-top: 30px;
+}
+.header .row .input-group input {
+  height: 40px;
+  border-radius: 0;
+  border: 2px solid #ED145B;
+  outline: none;
+}
+.header .row .input-group button {
+  height: 40px;
+  background: #ED145B;
+  color: #fff;
+  border-radius: 0;
+  width: 100px;
+  outline: none;
+  margin-left: -2px;
+}
+.header .row .btn-group {
+  margin-top: 30px;
+}
+.header .row .btn-group .btn {
+  border-radius: 2px;
+  height: 40px;
+  font-size: 12px;
+}
+.header .row .btn-group .btn a {
+  text-decoration: none;
+  color: #777;
+}
+.header .row .btn-group .btn span {
+  color: #ED145B;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.header .row .btn-group .dropdown-menu {
+  height: 50px;
+  width: 300px;
+}
+#content {
+  width: 100%;
+}
+#content img {
+  width: 100%;
+}

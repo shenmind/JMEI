@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>注册页</title>
+    <title>注册-聚美账户</title>
+    <link rel="stylesheet" href="../style/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/less/login.css">
 </head>
+
 <body>
-    
+
+    <!-- Modal  **一进入注册页就会出现一个模态框*** -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">协议订立须知</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <b>在您注册成为聚美用户的过程中，您需要完成我们的注册流程并通过点击同意的形式签署《聚美优品用户协议》、《聚美隐私权政策》。</b>
+                        </br>
+                        <b>★ 审慎阅读</b> ：您在申请用户注册流程中点击同意并接受协议之前，应当认真阅读《聚美优品用户协议》和《聚美隐私权政策》（“协议”）。
+                        <b> 请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款、法律适用和争议解决条款，并确定了解我们对您个人信息的处理规则。您有权选择同意或者不同意协议。</b> 如您对协议有任何疑问，可向聚美客服咨询。</br>
+                        <b>★ 签约动作</b> ：当您按照注册页面提示填写信息、
+                        <b>点击“同意协议并注册”且完成全部注册程序后，</b> 即表示您已充分阅读、理解并接受协议的全部内容，您同意聚美可以依据隐私政策内容来处理您的个人信息，同时也表明您与聚美达成一致，成为聚美“用户”。</br>
+                        <b>阅读协议过程中，如您不同意相关协议或其中任何条款约定，应立即停止注册程序或停止使用聚美平台服务。</b>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" id="model_btn" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 头部 -->
+    <div class="container head">
+        <div class="row">
+            <div class="col-lg-5 col-md-4 col-sm-2 col-xs-12 logo">
+                <a href="#">聚美优品</a>
+            </div>
+            <div class="col-lg-6 col-md-7 col-sm-9 hidden-xs header">
+                <div class="row">
+                    <div class="col-lg-3 col-xs-3 header_left">
+                        <a href="#">真品防伪码</a>
+                    </div>
+                    <div class="col-lg-5 col-xs-5 header_center">
+                        <a href="#">美妆满200</a>
+                    </div>
+                    <div class="col-lg-3 col-xs-3 header_right">
+                        <a href="#">闪电发货</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 中间表单部分 -->
+    <div class="container form">
+        <div class="row ">
+            <div class="col-lg-6 col-md-5 col-sm-3 hidden-xs pic">
+                <a href="#">聚美优品</a>
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-9 col-xs-12 form_login">
+                <ul class="form-group">
+                    <li>
+                        <span class="hot">用户注册</span>
+                        <span class="link">已有账号<a href="./enter.html">在此登录</a></span>
+                    </li>
+                    <li>
+                        <input type="text" id="telphone" name="telphone" placeholder="手机号">
+                        <P><span>请输入11位手机号</span></P>
+                    </li>
+                    <li>
+                        <input type="text" id="message" name="message" placeholder="短信验证码">
+                        <input type="button" id="mess_btn" value="获取短信验证码">
+                        <p><span>请输入6位短信验证码</span></p>
+                    </li>
+                    <li>
+                        <input type="text" id="password" name="password" placeholder="密码">
+                        <p><span>6-16个字符，建议使用数字加字母或符号组合</span></p>
+                    </li>
+                    <li>
+                        <input type="text" id="password" name="password" placeholder="重复密码">
+                        <p><span>请再次输入密码</span></p>
+                    </li>
+                    <li>
+                        <input type="button" class="btn_login" value="注册">
+                    </li>
+                    <li>
+                        <a href="#">《聚美优品用户协议》</a>
+                        <a href="#">《聚美隐私权政策》</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../style/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="../js/login.js"></script> -->
 </body>
+
 </html>

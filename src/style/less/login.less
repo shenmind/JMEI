@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.modal .modal-header{
+    text-align: center;
+}
+.modal .modal-footer{
+   text-align: center;
+
+   #model_btn{
+       width:45%;
+       background:#FE4070;
+       height:45px;
+   }
+    
+}
+
+
+
+// 头部样式
+.head .row  {
+   
+    .logo{
+        background:url(../../img/logo_new_v1.jpg) no-repeat center center;
+        height:100px;
+        a{
+            display: inline-block;
+            height:100px;
+            width:100%;
+            text-indent: -9999px;
+        }
+
+    }
+    .header{
+        float: left;
+        height:100px;
+        position: relative;
+        background:#fff;
+
+        .header_left{
+            position: absolute;
+            top:29px;
+            background:url(../../img/header_corn_new_v2.png) no-repeat top left;
+            height:31px;
+            a{
+                display: inline-block;
+                height:31px;
+                width:100%;
+                text-indent: -9999px;
+            }
+        }
+        .header_center{
+            position: absolute;
+            top:29px;
+            left:150px;
+            background:url(../../img/gild.png) no-repeat top left;
+            height:31px;
+            a{
+                display: inline-block;
+                height:31px;
+                width:100%;
+                text-indent: -9999px;
+            }
+        }
+        .header_right{
+            position: absolute;
+            top:29px;
+            left:370px;
+            background:url(../../img/header_corn_new_v2.png) no-repeat 6px -64px;
+            height:31px;
+            a{
+                display: inline-block;
+                height:31px;
+                width:100%;
+                text-indent: -9999px;
+            }
+        }
+        
+    }
+    
+    
+}
+
+
+// 中间表单部分样式
+.form .row{
+    background:url(../../img/signPic.jpg) no-repeat left bottom;
+    height:480px;
+    .pic{
+        height:480px;
+        a{
+            display: inline-block;
+            height:480px;
+            width:100%;
+            text-indent: -9999px;
+
+        }
+    }
+    .form_login{
+        height:480px;
+        // border:1px solid #000;
+        background:#fff;
+        .form-group{
+            padding:20px;
+            border:1px solid #f2f2f2;
+            li{
+                height:55px;
+                width:100%;
+               
+                list-style: none;
+                margin-top:10px;
+                
+                input{
+                    height:36px;
+                    width:100%;
+                }
+                input[id=message]{
+                    width:45%;
+                }
+                input[id=mess_btn]{
+                    width:45%;
+                    float: right;
+                    background-color: #f2f2f2;
+                    color:#666;
+                    outline: none;
+                    border:none;
+                }
+                input[class=btn_login]{
+                    color:#fff;
+                    background-color: #F8296D;
+                    outline: none;
+                    border:none;
+                }
+                ::-webkit-input-placeholder {
+                    color: #666;
+                       padding-left:5px;
+                    }
+                span{
+                  font-size:8px;
+                  text-align: left;
+                  padding-left:5px;
+                  color:#aaa;
+                  
+
+                }
+                .hot{
+                    font-size: 36px;
+                    color:#e31256;
+                }
+                .link{
+                    float: right;
+                    line-height: 55px;
+                    a{
+                        color:#ed145b;
+                    }
+                }
+                a{
+                    color:#ed145b;
+                    font-size:12px; 
+                }
+                a:last-child{
+                    float: right;
+                }
+
+    
+            }
+
+        }
+        
+    }
+
+}
