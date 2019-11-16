@@ -88,7 +88,7 @@
 
 
 // 中间表单部分样式
-.form .row{
+.form_loginPic .row{
     background:url(../../img/signPic.jpg) no-repeat left bottom;
     height:480px;
     .pic{
@@ -137,16 +137,19 @@
                     border:none;
                 }
                 ::-webkit-input-placeholder {
-                    color: #666;
+                    color: #999;
                        padding-left:5px;
                     }
                 span{
                   font-size:8px;
                   text-align: left;
                   padding-left:5px;
-                  color:#aaa;
+                  color:#ccc;
                   
 
+                }
+                span[class*=tip]{
+                    display: none;
                 }
                 .hot{
                     font-size: 36px;
@@ -174,4 +177,48 @@
         
     }
 
+}
+
+
+
+//底部信息样式
+.footer{
+    margin-top:60px;
+    color:#222;
+    font-size:12px;
+    .row:first-child{
+        a{
+            color:#222;
+        }
+    }
+    .row:last-child{
+        height:80px;
+        // background:yellow;
+        
+        .col-lg-2{
+            height:52px;
+            
+            margin:15px;
+        }
+        .col-lg-2:nth-child(1){
+            background:url(../../img/header_corn_new_v2.png) no-repeat 60px -167px;
+
+        }
+        .col-lg-2:nth-child(2){
+            background:url(../../img/header_corn_new_v2.png) no-repeat 60px -219px;
+
+        }
+        .col-lg-2:nth-child(3){
+            background:url(../../img/header_corn_new_v2.png) no-repeat 60px -271px;
+
+        }
+        .col-lg-2:nth-child(4){
+            background:url(../../img/header_corn_new_v2.png) no-repeat 60px -320px;
+
+        }
+        .col-lg-2:nth-child(5){
+            background:url(../../img/header_corn_new_v2.png) no-repeat 53px -371px;
+
+        }
+    }
 }

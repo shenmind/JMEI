@@ -1,12 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>登录</title>
-</head>
-<body>
+    <title>登录聚美</title>
+    <link rel="stylesheet" href="../style/bootstrap/css/bootstrap.min.css">
     
+    <link rel="stylesheet" href="../style/less/login.css">
+    <link rel="stylesheet" href="../style/less/enter.css">
+    <link rel="stylesheet" href="../style/font/iconfont.css">
+</head>
+
+<body>
+
+    
+ <!-- 头部 -->
+    <div class="container head">
+        <div class="row">
+            <div class="col-lg-5 col-md-4 col-sm-2 col-xs-12 logo">
+                <a href="#">聚美优品</a>
+            </div>
+            <div class="col-lg-6 col-md-7 col-sm-9 hidden-xs header">
+                <div class="row">
+                    <div class="col-lg-3 col-xs-3 header_left">
+                        <a href="#">真品防伪码</a>
+                    </div>
+                    <div class="col-lg-5 col-xs-5 header_center">
+                        <a href="#">美妆满200</a>
+                    </div>
+                    <div class="col-lg-3 col-xs-3 header_right">
+                        <a href="#">闪电发货</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 中间表单部分 -->
+    <div class="container form_loginPic" id="enterPic">
+        <div class="row ">
+            <div class="col-lg-6 col-md-5 col-sm-3 hidden-xs pic">
+                <a href="#">聚美优品</a>
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-9 col-xs-12 form_login">
+                <ul class="form-group">
+                    <li>
+                        <span class="hot">登录聚美</span>
+                        <span class="link">还没有聚美账号？<a href="./login.html">30秒注册</a></span>
+                    </li>
+                    <li>
+                        <p><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        <input type="text" id="telphone" name="telphone" placeholder="已验证手机/邮箱/用户名"></p>
+                        <P><span class="telp_tip tip">请输入登录名，登录名可能是您的手机号、邮箱或用户名</span></P>
+                    </li>
+                   
+                    <li>
+                            
+                        <p><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                        <input type="text" id="password" name="password" placeholder="密码"></P>
+                        <p><span class="pword_tip tip">请输入您的密码，您的密码可能为字母、数字或符号的组合</span></p>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox" name="checkbox">
+                        <label for="checkbox" id="box">自动登录</label>
+                        <a href="#">忘记密码?</a>
+                    </li>
+                    <li>
+                        <input type="button" class="btn_login" id="enter" value="登录">
+                    </li>
+                    <li>
+                        <a href="#">《聚美优品用户协议》</a>
+                        <a href="#">《聚美隐私权政策》</a>
+                    </li>
+                    <!-- <li>
+                        <p>你也可以使用以下账号登录</p>
+                       <a href="#" > <span class="iconfont icon-zhifubao" id="icfont" style="font-size:24px;color:#ccc"></span></a>
+                       <a href="#"> <span class="iconfont icon-weibo" id="icfont"  style="font-size:24px;color:#ccc"></span></a>
+                       
+                       <a href="#"> <span class="iconfont icon-baidu" id="icfont" style="font-size:24px;color:#ccc"></span></a>
+                       <a href="#" style="float: left"> <span class="iconfont icon-weixin" id="icfont" style="font-size:24px;color:#ccc"></span></a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 底部信息 -->
+    <div class="container text-center footer">
+        <div class="row">
+            <p>Copyright © 2010-2015 北京创锐文化传媒有限公司 Jumei.com 保留一切权利。客服热线：400-123-8888</p>
+            <p>京公网安备 11010102001226 号 | <a href="#">京ICP证111033号</a> | 食品流通许可证 SP1101051110165515（1-1） | <a href="#">营业执照</a> | <a href="#">公示制度</a></p>
+        </div>
+       
+        <div class="row text-center">
+            <div class="col-lg-2 hidden-xs"></div>
+            <div class="col-lg-2 hidden-xs"></div>
+            <div class="col-lg-2 hidden-xs"></div>
+            <div class="col-lg-2 hidden-xs"></div>
+            <div class="col-lg-2 hidden-xs"></div>
+        </div>
+    </div>
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../style/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/require.js" data-main="../js/enter_app"></script>
 </body>
+
 </html>

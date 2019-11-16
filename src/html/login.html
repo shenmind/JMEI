@@ -64,7 +64,7 @@
 
 
     <!-- 中间表单部分 -->
-    <div class="container form">
+    <div class="container form_loginPic">
         <div class="row ">
             <div class="col-lg-6 col-md-5 col-sm-3 hidden-xs pic">
                 <a href="#">聚美优品</a>
@@ -76,24 +76,24 @@
                         <span class="link">已有账号<a href="./enter.html">在此登录</a></span>
                     </li>
                     <li>
-                        <input type="text" id="telphone" name="telphone" placeholder="手机号">
-                        <P><span>请输入11位手机号</span></P>
+                        <input type="text" id="telphone" name="telphone" placeholder="手机号" required>
+                        <P><span class="telp_tip tip">请输入11位手机号</span></P>
                     </li>
                     <li>
-                        <input type="text" id="message" name="message" placeholder="短信验证码">
+                        <input type="text" id="message" name="message" placeholder="短信验证码" required>
                         <input type="button" id="mess_btn" value="获取短信验证码">
-                        <p><span>请输入6位短信验证码</span></p>
+                        <p><span class="mess_tip tip">请输入6位短信验证码</span></p>
                     </li>
                     <li>
-                        <input type="text" id="password" name="password" placeholder="密码">
-                        <p><span>6-16个字符，建议使用数字加字母或符号组合</span></p>
+                        <input type="text" id="password" name="password" placeholder="密码" required>
+                        <p><span class="pword_tip tip">6-16个字符，建议使用数字加字母或符号组合</span></p>
                     </li>
                     <li>
-                        <input type="text" id="password" name="password" placeholder="重复密码">
-                        <p><span>请再次输入密码</span></p>
+                        <input type="text" id="password2" name="password" placeholder="重复密码" required>
+                        <p><span class="pword_tip2 tip">请再次输入密码</span></p>
                     </li>
                     <li>
-                        <input type="button" class="btn_login" value="注册">
+                        <input type="button" class="btn_login" id="login" value="注册">
                     </li>
                     <li>
                         <a href="#">《聚美优品用户协议》</a>
@@ -106,9 +106,28 @@
 
 
 
+
+    <!-- 底部信息 -->
+    <div class="container text-center footer ">
+        <div class="row">
+            <p>Copyright © 2010-2015 北京创锐文化传媒有限公司 Jumei.com 保留一切权利。客服热线：400-123-8888</p>
+            <p>京公网安备 11010102001226 号 | <a href="#">京ICP证111033号</a> | 食品流通许可证 SP1101051110165515（1-1） | <a href="#">营业执照</a> | <a href="#">公示制度</a></p>
+        </div>
+       
+        <div class="row">
+            <div class="col-lg-2 hidden-xs"></div>
+            <div class="col-lg-2 hidden-xs"></div>
+            <div class="col-lg-2 hidden-xs"></div>
+            <div class="col-lg-2 hidden-xs"></div>
+            <div class="col-lg-2 hidden-xs"></div>
+        </div>
+    </div>
+
+
     <script src="../js/jquery.js"></script>
     <script src="../style/bootstrap/js/bootstrap.min.js"></script>
-    <!-- <script src="../js/login.js"></script> -->
+    <script src="../js/require.js" data-main="../js/login_app"></script>
+    
 </body>
 
 </html>

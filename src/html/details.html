@@ -1,12 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/less/index.css">
+    <link rel="stylesheet" href="../style/less/details.css">
     <title>商品详情</title>
 </head>
+
 <body>
+    <!-- 右侧固定 -->
+    <div id="fix">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </a>
+                    <div class="hovertip my">
+                        <div class="photo">
+                                  
+                        </div>
+                        <div class="log">
+                            你好！请&nbsp;<a href="./enter.html">登录</a>&nbsp;|&nbsp;<a href="./login.html">注册</a>
+                        </div>
+                        
+                        <div class="btns">
+                            <input type="button" value="我的订单">
+                            <input type="button" value="我的收藏">
+                        </div>
     
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                        <p>购</p>
+                        <p>物</p>
+                        <p>车</p>
+                        <p id="number">0</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+                    </a>
+                    <div class="hovertip">我的财产</div>
+                </li>
+    
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                    </a>
+                    <div class="hovertip">我的心愿单</div>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+                    </a>
+                    <div class="hovertip">我看过的</div>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>
+                    </a>
+                    <div class="hovertip telcode">
+                        <img src="../img/qrcode.png" alt="">
+                        
+                    </div>
+                </li>
+    
+    
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                    </a>
+                    <div class="hovertip">客服中心</div>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+    
+                    </a>
+                    <div class="hovertip">返回顶部</div>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+    <!-- 头部导航 -->
+    <nav class="navbar navbar-default" style="height:30px;">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <b>欢迎来到聚美！</b>
+                    </li>
+                    <li>
+                        <a href="./enter.html">请登录</a>
+                    </li>
+                    <li>
+                        <a href="./login.html">快速注册</a>
+                    </li>
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a href="#">正品保证</a>
+                    </li>
+                    <li>
+                        <a href="#">订单查询</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>收藏的品牌</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的聚美
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">我的订单</a>
+                            </li>
+                            <li>
+                                <a href="#">我的现金券</a>
+                            </li>
+                            <li>
+                                <a href="#">我的红包</a>
+                            </li>
+                            <li>
+                                <a href="#">我的余额</a>
+                            </li>
+                            <li>
+                                <a href="#">我的提现退款</a>
+                            </li>
+                            <li>
+                                <a href="#">我的收藏</a>
+                            </li>
+                            <li>
+                                <a href="#">我的心愿单</a>
+                            </li>
+                            <li>
+                                <a href="#">会员中心</a>
+                            </li>
+                            <li>
+                                <a href="#">礼品卡兑换</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                            手机聚美</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">邀请好友</a>
+                            </li>
+                            <li>
+                                <a href="#">加入收藏</a>
+                            </li>
+                            <li>
+                                <a href="#">新浪微博</a>
+                            </li>
+                            <li>
+                                <a href="#">聚美微信</a>
+                            </li>
+                            <li>
+                                <a href="#">百度贴吧</a>
+                            </li>
+                            <li>
+                                <a href="#">腾讯微博</a>
+                            </li>
+                            <li>
+                                <a href="#">人人公众主页</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+    <!-- 头部搜索 -->
+    <div class="container header">
+        <div class="row">
+            <div class="col-lg-3 hidden-xs logo_index"></div>
+            <div class="col-lg-6 col-xs-12">
+                <!-- <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">搜索</button>
+                        </span>
+                    </div> -->
+            </div>
+            <div class="col-lg-3 hidden-xs shopcart">
+                <div class="btn-group">
+                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                    <a href="#">去购物车结算</a>
+
+                </div>
+                <ul class="cart">
+                    购物车中还没有商品， 快去挑选心爱的商品吧！
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- 商品详情,需要渲染数据 -->
+    <div id="detail">
+        <div class="detail_img">
+            <img src="../img/list_img/list04.jpg" alt="">
+            <ul class="small_imges">
+                    <li><img src="../img/list_img/list04.jpg" alt=""></li>
+                    <li><img src="../img/list_img/list04.jpg" alt=""></li>
+                    <li><img src="../img/list_img/list04.jpg" alt=""></li>
+
+            </ul>
+        </div>
+        <div class="detail_mess">
+            <ul class="small_mess">
+                <li>
+                    <h2>Timberland Premium Roll Top Boots 添柏岚男鞋女鞋GS 时尚休闲鞋 牛皮防水保暖靴</h2>
+                </li>
+                <li>￥799</li>
+                <li>
+                   <p>运费：<b>新人包邮</b>月销20</p>
+                    
+                </li>
+                <li>
+                    <p>服务:<b>质量保险</b> | 本商品支持7天无条件退货（拆封后不支持）| 本商品不支持换货 | 闪电发货</p>
+                </li>
+                <li>
+                    <p>型号：
+                        <input type="button" value="xxxx">
+                        <input type="button" value="yyyyyy">
+                        <input type="button" value="zzzz">
+                    </p>
+                </li>
+                <li>
+                    数量：<input type="number" name="" id="">
+                </li>
+                <li>
+                   <p>  <input type="button" value="立即购买">
+                       <input type="button" value="加入购物车"></p> 
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
 </body>
+
 </html>
