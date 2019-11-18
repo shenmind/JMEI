@@ -82,6 +82,9 @@
   text-align: center;
   background: #fff;
 }
+#fix ul li .my .log span {
+  background: #fff;
+}
 #fix ul li .my .log a {
   display: inline;
   color: #ED145B;
@@ -247,8 +250,12 @@
   justify-content: space-evenly;
   flex-direction: column;
 }
+.section01 .list li a {
+  text-decoration: none;
+}
 .section01 .list li img {
   height: 300px;
+  width: 298px;
 }
 .section01 .list li .tite h5 {
   font-weight: 700;
@@ -287,8 +294,52 @@
   height: 535px;
 }
 .section02 .list {
-  height: 600px;
-  background-color: yellowgreen;
+  margin: 20px 0px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+.section02 .list li {
+  list-style: none;
+  background: #eee;
+  border: 1px solid #eee;
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.section02 .list li a {
+  text-decoration: none;
+}
+.section02 .list li img {
+  height: 300px;
+  width: 298px;
+}
+.section02 .list li .tite h5 {
+  font-weight: 700;
+  text-align: center;
+}
+.section02 .list li .price {
+  height: 50px;
+}
+.section02 .list li .price span {
+  font-size: 24px;
+  color: #ED145B;
+  padding-left: 10px;
+}
+.section02 .list li .price button {
+  width: 92px;
+  height: 31px;
+  float: right;
+  margin-right: 10px;
+  background: #ED145B;
+  border: none;
+  color: #fff;
+}
+.section02 .list li:hover {
+  border: 1px solid #ED145B;
 }
 .section03 {
   width: 100%;
@@ -310,8 +361,52 @@
   height: 547px;
 }
 .section03 .list {
-  height: 600px;
-  background-color: yellowgreen;
+  margin: 20px 0px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+.section03 .list li {
+  list-style: none;
+  background: #eee;
+  border: 1px solid #eee;
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.section03 .list li a {
+  text-decoration: none;
+}
+.section03 .list li img {
+  height: 300px;
+  width: 298px;
+}
+.section03 .list li .tite h5 {
+  font-weight: 700;
+  text-align: center;
+}
+.section03 .list li .price {
+  height: 50px;
+}
+.section03 .list li .price span {
+  font-size: 24px;
+  color: #ED145B;
+  padding-left: 10px;
+}
+.section03 .list li .price button {
+  width: 92px;
+  height: 31px;
+  float: right;
+  margin-right: 10px;
+  background: #ED145B;
+  border: none;
+  color: #fff;
+}
+.section03 .list li:hover {
+  border: 1px solid #ED145B;
 }
 .section04 {
   width: 100%;
@@ -333,8 +428,52 @@
   height: 526px;
 }
 .section04 .list {
-  height: 600px;
-  background-color: yellowgreen;
+  margin: 20px 0px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+.section04 .list li {
+  list-style: none;
+  background: #eee;
+  border: 1px solid #eee;
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.section04 .list li a {
+  text-decoration: none;
+}
+.section04 .list li img {
+  height: 300px;
+  width: 298px;
+}
+.section04 .list li .tite h5 {
+  font-weight: 700;
+  text-align: center;
+}
+.section04 .list li .price {
+  height: 50px;
+}
+.section04 .list li .price span {
+  font-size: 24px;
+  color: #ED145B;
+  padding-left: 10px;
+}
+.section04 .list li .price button {
+  width: 92px;
+  height: 31px;
+  float: right;
+  margin-right: 10px;
+  background: #ED145B;
+  border: none;
+  color: #fff;
+}
+.section04 .list li:hover {
+  border: 1px solid #ED145B;
 }
 .section05 {
   width: 100%;
@@ -351,8 +490,52 @@
   height: 523px;
 }
 .section05 .list {
-  height: 600px;
-  background-color: yellowgreen;
+  margin: 20px 0px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+.section05 .list li {
+  list-style: none;
+  background: #eee;
+  border: 1px solid #eee;
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.section05 .list li a {
+  text-decoration: none;
+}
+.section05 .list li img {
+  height: 300px;
+  width: 298px;
+}
+.section05 .list li .tite h5 {
+  font-weight: 700;
+  text-align: center;
+}
+.section05 .list li .price {
+  height: 50px;
+}
+.section05 .list li .price span {
+  font-size: 24px;
+  color: #ED145B;
+  padding-left: 10px;
+}
+.section05 .list li .price button {
+  width: 92px;
+  height: 31px;
+  float: right;
+  margin-right: 10px;
+  background: #ED145B;
+  border: none;
+  color: #fff;
+}
+.section05 .list li:hover {
+  border: 1px solid #ED145B;
 }
 .footer {
   border-bottom: 1px solid #777;

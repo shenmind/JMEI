@@ -4,12 +4,12 @@
   margin: 0;
   box-sizing: border-box;
 }
-#detail {
+#allContent #detail {
   height: 600px;
   width: 100%;
   border-top: 2px solid #eee;
 }
-#detail .detail_img {
+#allContent #detail .detail_img {
   margin-top: 30px;
   float: left;
   width: 374px;
@@ -18,31 +18,187 @@
   margin-left: 150px;
   padding: 10px;
 }
-#detail .detail_img img {
+#allContent #detail .detail_img img {
   height: 350px;
+  width: 350px;
 }
-#detail .detail_img .small_imges {
+#allContent #detail .detail_img .small_imges {
   height: 100px;
 }
-#detail .detail_img .small_imges li {
+#allContent #detail .detail_img .small_imges li {
   list-style: none;
   float: left;
   margin: 7px;
   border: 1px solid #ddd;
   border-radius: 2px;
 }
-#detail .detail_img .small_imges li img {
+#allContent #detail .detail_img .small_imges li img {
   width: 100px;
   height: 110px;
 }
-#detail .detail_img .small_imges li :hover {
+#allContent #detail .detail_img .small_imges li :hover {
   border: 1px solid #666;
 }
-#detail .detail_mess {
+#allContent #detail .detail_mess {
   margin-top: 30px;
   margin-left: 80px;
   height: 500px;
-  width: 600px;
-  background: plum;
+  width: 510px;
   float: left;
+}
+#allContent #detail .detail_mess .small_mess li {
+  list-style: none;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(1) {
+  height: 60px;
+  line-height: 30px;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(1) b {
+  font-size: 18px;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(2) {
+  height: 60px;
+  line-height: 60px;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(2) b {
+  font-size: 32px;
+  color: #222;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(3) {
+  height: 60px;
+  line-height: 60px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(3) p {
+  font-size: 10px;
+  color: #999;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(3) p b {
+  color: #fff;
+  background: #222;
+  font-weight: 100;
+  font-size: 12px;
+  margin-left: 6px;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(3) p span {
+  margin-left: 310px;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(4) {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #ddd;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(4) p {
+  font-size: 10px;
+  color: #999;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(4) p span {
+  margin-left: 10px;
+  color: #666;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(5) {
+  height: 50px;
+  line-height: 50px;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(5) p span {
+  font-size: 10px;
+  color: #999;
+  float: left;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(5) p input {
+  height: 25px;
+  width: 120px;
+  border: 1px solid #e01558;
+  background: #fff;
+  margin-top: 12px;
+  float: left;
+  margin-left: 10px;
+  color: #111;
+  text-align: center;
+  line-height: 25px;
+  outline: none;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(6) {
+  height: 40px;
+  line-height: 40px;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(6) span {
+  font-size: 10px;
+  color: #999;
+  float: left;
+}
+#allContent #detail .detail_mess .small_mess li:nth-child(6) input {
+  height: 20px;
+  width: 50px;
+  border: 1px solid #999;
+  background: #fff;
+  margin-top: 10px;
+  float: left;
+  margin-left: 10px;
+  color: #111;
+  text-align: center;
+  line-height: 20px;
+  outline: none;
+}
+#allContent #detail .detail_mess li:nth-child(7) {
+  height: 100px;
+  line-height: 100px;
+  border-bottom: 1px solid #ddd;
+}
+#allContent #detail .detail_mess li:nth-child(7) p input {
+  height: 45px;
+  width: 150px;
+  background: #e01558;
+  color: #fff;
+  outline: none;
+  border: 1px solid #eee;
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+}
+#allContent #detail .detail_mess li:nth-child(7) p input:last-child {
+  margin-left: 30px;
+}
+#allContent #detail .detail_mess li:nth-child(8) {
+  height: 40px;
+  line-height: 40px;
+}
+#allContent #detail .detail_mess li:nth-child(8) p {
+  font-size: 10px;
+  color: #999;
+}
+#allContent #detail .detail_mess li:nth-child(8) p a {
+  text-decoration: none;
+  color: #e01558;
+}
+#allContent #allpic {
+  width: 75%;
+  margin-left: 11%;
+  border-bottom: 2px solid #eee;
+}
+#allContent #allpic .pic_title {
+  height: 50px;
+  width: 100%;
+  background: url(../../img/detail_content.jpg) no-repeat 50px 0px;
+}
+#allContent #allpic .pices {
+  width: 100%;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+#allContent #allpic .pices img {
+  margin-top: 20px;
+  margin-left: 11%;
+}
+.detail_foot {
+  height: 50px;
+  width: 100%;
+  margin-top: 50px;
+  background: #57214c;
+  text-align: center;
+  padding-top: 10px;
+}
+.detail_foot p {
+  color: #fff;
 }

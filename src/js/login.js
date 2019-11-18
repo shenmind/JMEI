@@ -9,22 +9,17 @@ define(['jquery', 'md5'], function ($, md5) {
                     $.ajax({
                         url: 'http://localhost:8080/My_exercise/JMEI/lib/login.php',
                         type: 'post',
-                        
+                        dataType:'json',
                         data: {
                             telphone: $('#telphone').val(),
                             password: $.md5($('#password').val())
                         },
                         success: function (res) {
-                            console.log(res);
-                            
-                           //var res=JSON.parse(res);
-                           // console.log(res)
-                            // alert(res.msg);
-                            // location.href = res.url;
-                            // //location.reload();
-                            
-                            
-                        }
+                            console.log( res);
+                             alert(res.msg);
+                             location.href = res.url;
+                             //location.reload();
+                         }
                     
                     });
                 }

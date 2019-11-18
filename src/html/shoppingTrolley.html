@@ -1,12 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>购物车-商品结算</title>
+    <link rel="stylesheet" href="../style/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/less/index.css">
+    <link rel="stylesheet" href="../style/less/login.css">
+    <link rel="stylesheet" href="../style/less/shoppingTrolley.css">
 </head>
+
 <body>
+    <!-- 头部导航 -->
+    <nav class="navbar navbar-default" style="height:30px;">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <b>欢迎来到聚美！</b>
+                    </li>
+                    <li>
+                        <a href="./enter.html">请登录</a>
+                    </li>
+                    <li>
+                        <a href="./login.html">快速注册</a>
+                    </li>
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a href="#">正品保证</a>
+                    </li>
+                    <li>
+                        <a href="#">订单查询</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>收藏的品牌</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的聚美
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">我的订单</a>
+                            </li>
+                            <li>
+                                <a href="#">我的现金券</a>
+                            </li>
+                            <li>
+                                <a href="#">我的红包</a>
+                            </li>
+                            <li>
+                                <a href="#">我的余额</a>
+                            </li>
+                            <li>
+                                <a href="#">我的提现退款</a>
+                            </li>
+                            <li>
+                                <a href="#">我的收藏</a>
+                            </li>
+                            <li>
+                                <a href="#">我的心愿单</a>
+                            </li>
+                            <li>
+                                <a href="#">会员中心</a>
+                            </li>
+                            <li>
+                                <a href="#">礼品卡兑换</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                            手机聚美</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">邀请好友</a>
+                            </li>
+                            <li>
+                                <a href="#">加入收藏</a>
+                            </li>
+                            <li>
+                                <a href="#">新浪微博</a>
+                            </li>
+                            <li>
+                                <a href="#">聚美微信</a>
+                            </li>
+                            <li>
+                                <a href="#">百度贴吧</a>
+                            </li>
+                            <li>
+                                <a href="#">腾讯微博</a>
+                            </li>
+                            <li>
+                                <a href="#">人人公众主页</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+    <!-- 头部搜索 -->
+    <div class="container header">
+        <div class="row">
+            <div class="col-lg-3 hidden-xs logo_index"></div>
+            <div class="col-lg-6 col-xs-12">
+                <!-- <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">搜索</button>
+                        </span>
+                    </div> -->
+            </div>
+            <div class="col-lg-3 hidden-xs shopcart">
+                <!-- <div class="btn-group">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                        <a href="#">去购物车结算</a>
+                     </div>  -->
+                <!-- <ul class="cart">
+                        购物车中还没有商品， 快去挑选心爱的商品吧！
+                    </ul> -->
+                <b style="margin-top:20px;">客服电话：400-123-8888</b>
+                <p>工作时间：9:00-21:00</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- 购物车商品 ，-->
+    <div id="shopes">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">名品特卖</label>
+                        </div>
+                    </th>
+                    <th>聚美价（元）</th>
+                    <th>数量</th>
+                    <th>小计（元）</th>
+                    <th>操作</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <!-- 需要获取的数据 -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <div>
+                            <input type="checkbox">
+                            <img src="../img/list_img/list04.jpg" alt="">
+
+                        </div>
+                        <b>
+                            <a href="">罗西尼休闲皮带腕表情侣手表516723</a>
+                        </b>
+                        <br>
+                        <p>容量：蓝色男表</p>
+                    </td>
+                    <td>
+                        <b>￥1360.00</b>
+                    </td>
+                    <td>
+                        <input type="number" value="1">
+                    </td>
+                    <td>
+                        <b>￥1360.00</b>
+                    </td>
+                    <td>
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <div>
+                            <input type="checkbox">
+                            <img src="../img/list_img/list04.jpg" alt="">
+
+                        </div>
+                        <b>
+                            <a href="">罗西尼休闲皮带腕表情侣手表516723</a>
+                        </b>
+                        <br>
+                        <p>容量：蓝色男表</p>
+                    </td>
+                    <td>
+                        <b>￥1360.00</b>
+                    </td>
+                    <td>
+                        <input type="number" value="1">
+                    </td>
+                    <td>
+                        <b>￥1360.00</b>
+                    </td>
+                    <td>
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                        <td></td>
+                        <td>
+                            <div>
+                                <input type="checkbox">
+                                <img src="../img/list_img/list04.jpg" alt="">
     
+                            </div>
+                            <b>
+                                <a href="">罗西尼休闲皮带腕表情侣手表516723</a>
+                            </b>
+                            <br>
+                            <p>容量：蓝色男表</p>
+                        </td>
+                        <td>
+                            <b>￥1360.00</b>
+                        </td>
+                        <td>
+                            <input type="number" value="1">
+                        </td>
+                        <td>
+                            <b>￥1360.00</b>
+                        </td>
+                        <td>
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+
+
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">
+                        <span>商品金额:</span>
+                        <b>￥10086.00</b>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+        <div id="count_btn">
+            <input type="checkbox" id="">
+            <label for="">全选</label>
+            <span>
+                <a href="../html/index.html">继续购物</a>&nbsp;|
+                <a href="#">清空选中商品</a>
+            </span>
+            <b>
+                共
+                <a href="#"> 2 </a>件商品 商品应付总额：
+                <a href="#">¥1789.00</a>
+            </b>
+            <input type="button" value="去结算">
+
+        </div>
+    </div>
+
+
+
+
+    <!-- 底部信息 -->
+    <div class="container text-center footer"> 
+            <div class="row">
+                <p>Copyright © 2010-2015 北京创锐文化传媒有限公司 Jumei.com 保留一切权利。客服热线：400-123-8888</p>
+                <p>京公网安备 11010102001226 号 | <a href="#">京ICP证111033号</a> | 食品流通许可证 SP1101051110165515（1-1） | <a href="#">营业执照</a> | <a href="#">公示制度</a></p>
+            </div>
+           
+            <div class="row">
+                <div class="col-lg-2 hidden-xs"></div>
+                <div class="col-lg-2 hidden-xs"></div>
+                <div class="col-lg-2 hidden-xs"></div>
+                <div class="col-lg-2 hidden-xs"></div>
+                <div class="col-lg-2 hidden-xs"></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../style/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
