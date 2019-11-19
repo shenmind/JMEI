@@ -122,6 +122,89 @@
   border-radius: 50%;
   margin-left: 22%;
 }
+#fix ul li:nth-child(2) .shopUL {
+  min-height: 600px;
+  width: 280px;
+  position: absolute;
+  top: -130px;
+  left: -280px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+#fix ul li:nth-child(2) .shopUL p {
+  background: #fff;
+  color: #999;
+}
+#fix ul li:nth-child(2) .shopUL .shopes {
+  background: #fff;
+}
+#fix ul li:nth-child(2) .shopUL .shopes ul {
+  height: 90px;
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 10px;
+  border-bottom: 2px solid #ED145B;
+  background: #fff;
+}
+#fix ul li:nth-child(2) .shopUL .shopes ul img {
+  height: 70px;
+  width: 70px;
+  float: left;
+}
+#fix ul li:nth-child(2) .shopUL .shopes ul div {
+  height: 80px;
+  float: left;
+  width: 190px;
+  background: #fff;
+}
+#fix ul li:nth-child(2) .shopUL .shopes ul div p:nth-child(1) {
+  font-size: 10px;
+  height: 30px;
+  line-height: 15px;
+  margin-left: 0px;
+  color: #000;
+  background: #fff;
+  text-align: left;
+  margin-bottom: 0px;
+}
+#fix ul li:nth-child(2) .shopUL .shopes ul div p:nth-child(2) {
+  float: left;
+  font-size: 10px;
+  margin-left: 10px;
+  margin-left: 0px;
+  color: #666;
+  background: #fff;
+  height: 15px;
+  line-height: 15px;
+  margin-bottom: 0px;
+}
+#fix ul li:nth-child(2) .shopUL .shopes ul div p:last-child {
+  font-size: 10px;
+  color: #ED145B;
+  background: #fff;
+  height: 15px;
+  line-height: 15px;
+  width: 120px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+#fix ul li:nth-child(2) .shopUL .settle_accounts {
+  height: 50px;
+  border-radius: 5px;
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 10px;
+  background: #ED145B;
+  line-height: 50px;
+  text-align: center;
+  display: none;
+  margin-bottom: 10px;
+}
+#fix ul li:nth-child(2) .shopUL .settle_accounts a {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
 #fix ul li:nth-child(6) {
   margin-top: 50px;
 }
@@ -269,7 +352,7 @@
   color: #ED145B;
   padding-left: 10px;
 }
-.section01 .list li .price button {
+.section01 .list li .price .addCommodity {
   width: 92px;
   height: 31px;
   float: right;

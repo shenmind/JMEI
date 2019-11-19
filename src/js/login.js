@@ -7,7 +7,7 @@ define(['jquery', 'md5'], function ($, md5) {
                 //手机验证码为123456,重复密码一致
                 if ($(mess).val() == 123456 && $(word1).val() == $(word2).val()) {
                     $.ajax({
-                        url: 'http://localhost:8080/My_exercise/JMEI/lib/login.php',
+                        url: 'http://127.0.0.1:8080/My_exercise/JMEI/lib/login.php',
                         type: 'post',
                         dataType:'json',
                         data: {

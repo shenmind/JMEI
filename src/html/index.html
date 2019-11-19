@@ -37,13 +37,43 @@
                 </div>
             </li>
             <li>
-                <a href="./shoppingTrolley.html">
+                <a href="#">
                     <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
                     <p>购</p>
                     <p>物</p>
                     <p>车</p>
                     <p id="number">0</p>
                 </a>
+                <div class="shopUL hovertip">
+                    <!-- <a href="">
+                        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                    </a> -->
+                    <p id="timer">空空如也的购物车</p>
+                    <div class="shopes" style="">
+                        
+                    <!-- <ul>
+                        hovertip
+                        <img src="../img/list_img/section01_list01.jpg" alt="">
+                        <div>
+                            <p>罗西尼(ROSSINI)石英手表休闲皮带腕表潮流休闲情侣手表516723</p>
+                            <p>型号：蓝色</p>
+                            <p>￥99 X 1</p>
+                        </div>
+                    </ul>
+                    <ul>
+                        <img src="../img/list_img/section01_list02.jpg" alt="">
+                        <div>
+                            <p>罗西尼(ROSSINI)石英手表休闲皮带腕表潮流休闲情侣手表516723</p>
+                            <p>型号：蓝色</p></br>
+                            <p>￥99 X 1</p>
+                        </div>
+                    </ul> -->
+                </div>
+
+
+                <div class="settle_accounts" ><a href="./shoppingTrolley.html">去购物车结算</a></div>
+
+                </div>
             </li>
             <li>
                 <a href="#">
@@ -283,11 +313,12 @@
                 <div class="tite">
                     <h5>罗西尼新品陶瓷表带防水正品女表5722</h5>
                 </div>
+            </a>
                 <div class="price">
                     <span>￥1731</span>
                     <button>加入购物车</button>
                 </div>
-            </a>
+           
             </li>
           -->
         </div>
@@ -314,6 +345,15 @@
         <div class="row"></div>
         <div class="row list list05"></div>
         <div class="row list list06"></div>
+        <div class="row list list01"></div>
+        <div class="row list list02"></div>
+        <div class="row list list01"></div>
+        <div class="row list list02"></div>
+        <div class="row list list01"></div>
+        <div class="row list list02"></div>
+        <div class="row list list01"></div>
+
+
     </div>
 
 
@@ -494,9 +534,17 @@
 
 
     <script src="../js/jquery.js"></script>
-    
+
     <script src="../style/bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/require.js" data-main="../js/index_app"></script>
+
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            $("img").lazyload({ effect: "fadeIn" });
+        });
+    </script>
 </body>
 
 </html>

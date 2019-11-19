@@ -188,8 +188,13 @@
   border-right: 1px solid #eee;
 }
 #allContent #allpic .pices img {
-  margin-top: 20px;
   margin-left: 11%;
+}
+#allContent #allpic .pices img:first-child {
+  margin-top: 20px;
+}
+#allContent #allpic .pices img:last-child {
+  margin-bottom: 20px;
 }
 .detail_foot {
   height: 50px;

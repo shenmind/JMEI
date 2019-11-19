@@ -4,7 +4,7 @@ define(['jquery', 'md5', 'cookie'], function ($, md5, cookie) {
             $(selector).on('click', function () {
                 if ($(input_telp) != '' && $(input_telp) != null && $(input_pass) != '' && $(input_pass) != null) {
                     $.ajax({
-                        url: 'http://localhost:8080/My_exercise/JMEI/lib/enter.php',
+                        url: 'http://127.0.0.1:8080/My_exercise/JMEI/lib/enter.php',
                         type: 'post',
                         dataType: 'json',
                         data: {
@@ -17,7 +17,7 @@ define(['jquery', 'md5', 'cookie'], function ($, md5, cookie) {
                             var user_n = res[0];
                             location.href = res[2];
                             //document.cookie="user_name="+user_n+";expires=1;path=/";
-                            cookie.set("user_name", user_n);
+                            cookie.set("user_name", user_n,1);
                         }
                     });
 

@@ -16,6 +16,8 @@ require(['jquery','index','cookie'],function($,index,cookie){
   index.showdata('.list01',1);
    index.showdata('.list02',2);
 
+   index.addCommodity('.list','.addCommodity');
+
   
 
     
