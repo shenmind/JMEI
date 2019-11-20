@@ -12,7 +12,7 @@ require.config({
 });
 require(['jquery','index','cookie'],function($,index,cookie){
     index.setUsername(window);
-   // index.exit('#enter_exit');
+   index.exit('#enter_exit');
   index.showdata('.list01',1);
    index.showdata('.list02',2);
 

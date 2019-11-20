@@ -1,10 +1,11 @@
-let baseUrl = "http://127.0.0.1:8080/My_exercise/JMEI";
+//let baseUrl = "http://127.0.0.1:8080/My_exercise/JMEI";
 
-define(['jquery', 'cookie'], function ($, cookie) {
+define(['jquery', 'cookie', 'index'], function ($, cookie, index) {
     return {
+        //图片切换
         replacePic: function (selector) {
-           
-            $('#allContent').on('click mouseover',selector, function () {
+
+            $('#allContent').on('click mouseover', selector, function () {
                 $('#big_img').attr('src', $(selector).attr('src'));
 
             });
@@ -12,22 +13,53 @@ define(['jquery', 'cookie'], function ($, cookie) {
 
         },
 
+        //立即购买
+        goBuy: function (selector, input_amount) {
+            $('#allContent').on('click', selector, function () {
+                let id = location.search.split('=')[1];
+                if (cookie.get('id') != null) {
+                    //获取添加到了购物车的商品id,并和当前商品id比较，点击立即购买时，没有则添加到id cookie
+                   
+                    var str = cookie.get('id');
+                    var arr = str.split(',');
+                    for (var i = 0; i < arr.length - 1; i++) {
+                        if (arr[i] != id) {
+                            str += `${id},`;
+                        } else {
 
-        goBuy:function(selector,number){
-            $('#allContent').on('click',selector,function(){
-            //   location.href=`${baseUrl}/src/html/shoppingTrolley.html`;
-             var amount=$(number).val();
-             cookie.set('amount',amount,1);
-            
+                        }
+                        console.log(str);
+                    }
+                    cookie.set("id", str, 1);
+
+                }else{
+                    cookie.set("id", id, 1);
+                }
+                
+
+                //获取当前商品数量
+                var amount = $(input_amount).val();
+                cookie.set('amount', amount, 1);
+
+
+
+
+
+                //获取商品种类个数，没有则加一
+                var number = cookie.get('numbers');
+                number = Number(number) + 1
+                cookie.set('numbers', number, 1);
+
             })
 
         },
 
 
-        //   
+        //   获取数据渲染商品详情页
         showdata: function (selector) {
 
             let id = location.search.split('=')[1];
+
 
             $.ajax({
                 type: "get",
@@ -37,13 +69,13 @@ define(['jquery', 'cookie'], function ($, cookie) {
                 },
                 dataType: "json",
                 success: function (res) {
-                   // console.log(res);
+                    // console.log(res);
 
                     let temp = '';
                     res.forEach(elm => {
-                        var arr_img=JSON.parse(elm.detail_img);
+                        var arr_img = JSON.parse(elm.detail_img);
                         //console.log(arr_img);
-                        var arr_pic=JSON.parse(elm.detail_pic);
+                        var arr_pic = JSON.parse(elm.detail_pic);
                         temp = `
                         <div id="detail">
                         <div class="detail_img">
@@ -66,7 +98,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
                                     
                                 </li>
                                 <li>
-                                    <p>服务:<span>质量保险</span> |<span>本商品支持7天无条件退货（拆封后不支持）</span>|<span>本商品不支持换货</span>|<span>闪电发货</span></p>
+                                    <p>服务:<span>质量保险</span> |<span>本商品支持7天无条件退货（拆封后不支持）</span>|<span>本商品不支持换货</span></p>
                                 </li>
                                 <li>
                                     <p><span>型号:</span>
@@ -74,7 +106,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
                                      </p>
                                 </li>
                                 <li>
-                                   <span>数量:</span><input type="number" name="" id="" value="1">
+                                   <span>数量:</span><input type="number" name="" id="input_amount" value="1">
                                 </li>
                                 <li>
                                    <p> 
@@ -105,34 +137,44 @@ define(['jquery', 'cookie'], function ($, cookie) {
                       `
                     })
                     $(selector).append(temp);
-                    
-                    
+
+
 
 
                 }
             });
         },
 
-
-        add_comit:function(selector, btn_add){
+        //右侧加入购物车
+        add_comit: function (selector, btn_add) {
             // if(cookie.get('numbers')!=null&&cookie.get('numbers')!=undefined){
-                var number=cookie.get('numbers');
-                $('#number').text(number);
-          
-           
-            
-           // $('#number').text(number);
-            //console.log(cookie.get());
+            var number = cookie.get('numbers');
+            $('#number').text(number);
+
+
             $(selector).on('click', btn_add, function () {
-               
+
+
+                var str = cookie.get('id');
+                var arr = str.split(',');
                 let id = location.search.split('=')[1];
-                console.log(id);
+                for (var i = 0; i < arr.length - 2; i++) {
+                    if (arr[i] != id) {
+
+                        str += `${id},`;
+
+                    } else {
+                        return false;
+                    }
+                    console.log(str);
+                }
+                cookie.set("id", str, 1);
 
                 $.ajax({
                     type: "get",
                     url: "http://127.0.0.1:8080/My_exercise/JMEI/lib/details.php",
                     data: {
-                        article_id:id
+                        article_id: id
                     },
                     dataType: "json",
                     success: function (res) {
@@ -151,30 +193,28 @@ define(['jquery', 'cookie'], function ($, cookie) {
                             </div>
                         </ul>
                       `
-                     
+
                         })
-                       cookie.set(`id${id}`, id, 1);
-                     
+
+                        //cookie.set(`id${id}`, id, 1);
+
                         $('.shopes').append(temp);
-                        $('#timer').text('购物车将在20分钟后清空，请尽快结算！').css('color','#ED145B');
+                        $('#timer').text('购物车将在20分钟后清空，请尽快结算！').css('color', '#ED145B');
 
                         number++;
                     }
-                  
+
                 })
                 console.log(number);
-                 $('.settle_accounts').css('display','block');
-                 number=Number(number)+1
-                 $('#number').text(number);
+                $('.settle_accounts').css('display', 'block');
+                number = Number(number) + 1
+                $('#number').text(number);
 
-                 cookie.set('numbers',number,1);
-                 //.attr("disabled","disabled")
-                 $(this).attr("disabled","disabled").attr("value","已加入购物车").css('background','#666');
+                cookie.set('numbers', number, 1);
+
+                $(this).attr("disabled", "disabled").attr("value", "已加入购物车").css('background', '#666');
             })
-        // }
-        //     else{
-        //         $('#number').text('0');
-        //     }
+
         },
 
 

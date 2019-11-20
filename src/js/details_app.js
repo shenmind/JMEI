@@ -4,6 +4,8 @@ require.config({
         md5:"./jquery.md5",
         details:"./details",
         cookie:'./cookie',
+        index:'./index',
+      
        
        
     },
@@ -13,15 +15,19 @@ require.config({
 });
 
 
-require(['jquery','details','cookie'],function($,details,cookie){
+require(['jquery','details','cookie','index'],function($,details,cookie,index){
     details.showdata('#allContent');
     details. replacePic('#s_img01');
     details. replacePic('#s_img02');
    details. replacePic('#s_img03');
-   details.goBuy('#gobuy_btn','input[type=number]');
+   details.goBuy('#gobuy_btn','#input_amount');
     //details.replacePic();
+    
+    details.add_comit('#allContent','#add_comit');
 
-    details.add_comit('#allContent','#add_comit')
+    index.setUsername(window);
+
+
 
 
     

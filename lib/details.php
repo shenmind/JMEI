@@ -5,6 +5,7 @@
     include('./conn.php');
 
     $art_id=$_REQUEST['article_id'];
+
     //var_dump($art_id);
 
    

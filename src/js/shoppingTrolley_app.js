@@ -3,7 +3,8 @@ require.config({
         jquery:"./jquery.min",
         md5:"./jquery.md5",
         shoppingTrolley:"./shoppingTrolley",
-        cookie:'./cookie'
+        cookie:'./cookie',
+        index:'./index'
        
     },
     shim:{
@@ -12,8 +13,12 @@ require.config({
 });
 
 
-require(['jquery','shoppingTrolley','cookie'],function($,shoppingTrolley,cookie){
+require(['jquery','shoppingTrolley','cookie','index'],function($,shoppingTrolley,cookie,index){
     shoppingTrolley.getData('tbody');
     shoppingTrolley.replaceAmount('#amount','#pirce','#sub_total');
     shoppingTrolley.clearAll();
+    shoppingTrolley.gobuy_getData('tbody');
+
+    index.setUsername(window);
+    
 })

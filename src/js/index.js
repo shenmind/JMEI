@@ -1,11 +1,11 @@
-let baseUrl = "http://127.0.0.1:8080/My_exercise/JMEI";
+var baseUrl = "http://127.0.0.1:8080/My_exercise/JMEI";
 
 define(['jquery', 'cookie'], function ($, cookie) {
     return {
         setUsername: function (selector) {
 
             // $(selector).on('load', function () {
-            if (cookie.get('user_name') != null) {
+            if (cookie.get('user_name') != null&&cookie.get('user_name') != '') {
                 //console.log(cookie.get('user_name'));
                 var u_name = cookie.get('user_name');
                 $('#enter_exit').html('退出').css('color', '#ED145B');
@@ -58,7 +58,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
                         temp += `
                         <li>
                         <a href="${baseUrl}/src/html/details.html?id=${elm.article_id}" data-id="${elm.article_id}" class="aclick">
-                        <img data-original="${baseUrl}/src${elm.section_img}" alt="" src="${baseUrl}/src/img/lazypic02.jpg">
+                        <img src="${baseUrl}/src${elm.section_img}" alt="" data-original="${baseUrl}/src/img/lazypic02.jpg">
                         <div class="tite">
                             <h5>${elm.title}</h5>
                         </div>
@@ -92,10 +92,11 @@ define(['jquery', 'cookie'], function ($, cookie) {
             // var number=cookie.get('numbers');
             // $('#number').text(number);
             var number = 1;
+            var str="";
             $(selector).on('click', btn_add, function () {
                
                 var id = $(this).attr('data-btnid');
-                console.log(id);
+                  str+=`${id},`;
 
                 $.ajax({
                     type: "get",
@@ -122,11 +123,12 @@ define(['jquery', 'cookie'], function ($, cookie) {
                       `
                      
                         })
-                      cookie.set(`id${id}`, id, 1);
+                      cookie.set("id", str, 1);
                    
 
                      
                         $('.shopes').append(temp);
+                        alert('商品已成功添加到购物车！')
                         $('#timer').text('购物车将在20分钟后清空，请尽快结算！').css('color','#ED145B');
 
                         number++;
