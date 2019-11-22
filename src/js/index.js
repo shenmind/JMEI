@@ -1,11 +1,13 @@
 var baseUrl = "http://127.0.0.1:8080/My_exercise/JMEI";
 
-define(['jquery', 'cookie'], function ($, cookie) {
+define(['jquery', 'cookie','lazy'], function ($, cookie,lazy) {
     return {
+
+        //登录或获取用户名
         setUsername: function (selector) {
 
             // $(selector).on('load', function () {
-            if (cookie.get('user_name') != null&&cookie.get('user_name') != '') {
+            if (cookie.get('user_name') != null && cookie.get('user_name') != '') {
                 //console.log(cookie.get('user_name'));
                 var u_name = cookie.get('user_name');
                 $('#enter_exit').html('退出').css('color', '#ED145B');
@@ -23,7 +25,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
 
 
 
-
+        //点击退出后清除用户名cookie
         exit: function (selector) {
             $(selector).on('click', function () {
 
@@ -40,7 +42,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
         },
 
 
-
+        //获取商品数据渲染页面
         showdata: function (selector, page) {
 
             $.ajax({
@@ -58,7 +60,7 @@ define(['jquery', 'cookie'], function ($, cookie) {
                         temp += `
                         <li>
                         <a href="${baseUrl}/src/html/details.html?id=${elm.article_id}" data-id="${elm.article_id}" class="aclick">
-                        <img src="${baseUrl}/src${elm.section_img}" alt="" data-original="${baseUrl}/src/img/lazypic02.jpg">
+                        <img data-original="${baseUrl}/src${elm.section_img}" alt="" src="${baseUrl}/src/img/lazypic02.jpg">
                         <div class="tite">
                             <h5>${elm.title}</h5>
                         </div>
@@ -79,6 +81,9 @@ define(['jquery', 'cookie'], function ($, cookie) {
 
                     })
                     $(selector).append(temp);
+                    $(function() {
+                        $("img").lazyload({effect: "fadeIn"});
+                    });
 
 
 
@@ -87,75 +92,98 @@ define(['jquery', 'cookie'], function ($, cookie) {
             });
         },
 
-
+        //点击加入购物车
         addCommodity: function (selector, btn_add) {
-            // var number=cookie.get('numbers');
-            // $('#number').text(number);
-            var number = 1;
-            var str="";
-            $(selector).on('click', btn_add, function () {
-               
-                var id = $(this).attr('data-btnid');
-                  str+=`${id},`;
+            // console.log(cookie.get('id'));
+            var str_id = '';//商品id
+            var number = 0;//商品个数
+            //var arr = [];
 
+            $(selector).on('click', btn_add, function () {
+                var id = $(this).attr('data-btnid');
+                str_id += `${id},`;
+                number++;
+                // if (cookie.get('id') == undefined) {
+
+                //     str_id = `${id},`;
+                //     console.log(str_id);
+                //     cookie.set("id", str_id, 1);
+
+                //     $(this).attr("disabled", "disabled").attr("value", "已加入购物车").css('background', '#666');//添加后不能再点击
+                //     $('#number').text(number);
+                //     //  alert('商品已成功添加到购物车！')
+                //     number++;
+
+                // }
+                // else {
+                //     str_id = cookie.get('id');
+                //     arr = str_id.split(',');
+                //     var tem;
+                //     for (var i = 0; i < arr.length - 1; i++) {
+                //         if (id != arr[i]) {
+                //             str_id += `${id},`
+
+                //         }
+                //     }
+                //     console.log(str_id);
+                //     cookie.set("id", str_id, 1);
+                //     cookie.set('numbers', number, 1);//保存数量cookie
+                //     // $('.settle_accounts').css('display', 'block');
+                //     //alert('商品已成功添加到购物车！')
+                //     $('#number').text(number);
+                //     $(this).attr("disabled", "disabled").attr("value", "已加入购物车").css('background', '#666');//添加后不能再点击
+
+
+                // }
                 $.ajax({
                     type: "get",
                     url: "http://127.0.0.1:8080/My_exercise/JMEI/lib/details.php",
                     data: {
-                        article_id:id
+                        article_id: id
                     },
                     dataType: "json",
                     success: function (res) {
                         console.log(res);
-
                         let temp = '';
                         res.forEach(elm => {
-
                             temp += `
-                            <ul data_artid="${elm.article_id}">
-                            <img src="${baseUrl}/src${elm.section_img}" alt="">
-                            <div>
-                                <p>${elm.title}</p>
-                                <p>型号：${elm.type}</p></br>
-                                <p>￥${elm.price} X 1</p>
-                            </div>
-                        </ul>
-                      `
-                     
-                        })
-                      cookie.set("id", str, 1);
-                   
-
-                     
+                                    <ul data_artid="${elm.article_id}">
+                                    <img src="${baseUrl}/src${elm.section_img}" alt="">
+                                    <div>
+                                        <p>${elm.title}</p>
+                                        <p>型号：${elm.type}</p></br>
+                                        <p>￥${elm.price} X 1</p>
+                                    </div>
+                                </ul>
+                              `
+                        });
                         $('.shopes').append(temp);
-                        alert('商品已成功添加到购物车！')
-                        $('#timer').text('购物车将在20分钟后清空，请尽快结算！').css('color','#ED145B');
-
-                        number++;
-
-                      
+                        $('.settle_accounts').css('display', 'block');
+                        $('#timer').text('购物车将在20分钟后清空，请尽快结算！').css('color', '#ED145B');
                     }
-                    
                 })
-                console.log(number);
-                 $('.settle_accounts').css('display','block');
-                 $('#number').text(number);
-                 cookie.set('numbers',number,1);
-                 $(this).attr("disabled","disabled").attr("value","已加入购物车").css('background','#666');
+                $('#number').text(number);
+                $(this).attr("disabled", "disabled").attr("value", "已加入购物车").css('background', '#666');//添加后不能再点击
+                cookie.set("id", str_id, 1);
+                cookie.set('numbers', number, 1);//保存数量cookie
             })
-            
-           
-           
         },
 
 
 
-        go_settleaccounts:function(selector){
-            $(selector).on('click',function(){
-                   
+
+
+
+
+
+
+        go_settleaccounts: function (selector) {
+            $(selector).on('click', function () {
+
+
             })
 
-        }
+        },
 
 
 

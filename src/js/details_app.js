@@ -5,12 +5,14 @@ require.config({
         details:"./details",
         cookie:'./cookie',
         index:'./index',
+      lazy:'./jquery.lazyload.min'
       
        
        
     },
     shim:{
-        md5:['jquery']
+        md5:['jquery'],
+        lazy:['jquery']
     }
 });
 
@@ -24,7 +26,7 @@ require(['jquery','details','cookie','index'],function($,details,cookie,index){
     //details.replacePic();
     
     details.add_comit('#allContent','#add_comit');
-
+   // index.addCommodity('#allContent','#add_comit');
     index.setUsername(window);
 
 

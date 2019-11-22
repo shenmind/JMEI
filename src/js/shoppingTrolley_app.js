@@ -4,21 +4,30 @@ require.config({
         md5:"./jquery.md5",
         shoppingTrolley:"./shoppingTrolley",
         cookie:'./cookie',
-        index:'./index'
+        index:'./index',
+        lazy:'./jquery.lazyload.min'
        
     },
     shim:{
-        md5:['jquery']
+        md5:['jquery'],
+        lazy:['jquery'],
     }
 });
 
 
 require(['jquery','shoppingTrolley','cookie','index'],function($,shoppingTrolley,cookie,index){
-    shoppingTrolley.getData('tbody');
-    shoppingTrolley.replaceAmount('#amount','#pirce','#sub_total');
-    shoppingTrolley.clearAll();
-    shoppingTrolley.gobuy_getData('tbody');
-
     index.setUsername(window);
+    shoppingTrolley.getData('tbody');
+    
+   
+    shoppingTrolley.gobuy_getData('tbody');
+    shoppingTrolley.replaceAmount('.amount');
+
+    // var amount=document.querySelectorAll('.amount');
+    // console.log(amount);
+
+   
+    shoppingTrolley.clearAll();
+    shoppingTrolley.delete('tbody','#delete_btn');
     
 })

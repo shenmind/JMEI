@@ -3,11 +3,13 @@ require.config({
         jquery:"./jquery.min",
         md5:"./jquery.md5",
         index:"./index",
-        cookie:'./cookie'
+        cookie:'./cookie',
+        lazy:'./jquery.lazyload.min'
        
     },
     shim:{
-        md5:['jquery']
+        md5:['jquery'],
+        lazy:['jquery']
     }
 });
 require(['jquery','index','cookie'],function($,index,cookie){
